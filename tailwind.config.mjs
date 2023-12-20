@@ -17,7 +17,7 @@ export default {
 			},
 
 			backgroundImage: {
-				"fthb-bg-1": "url('/public/FTHB_BG1.jpg')",
+				"fthb-bg-1": "url('/FTHB_BG1.jpg')",
 			}
 		},
 	},
