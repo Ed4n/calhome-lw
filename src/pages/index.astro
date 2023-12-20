@@ -1,7 +1,72 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import HomeBG from "../img/home/Home_BG.png";
+import MobileHomeBG from "../img/home/Mobile_BG.png";
+import Logo from "../img/home/Logo.png";
+
+import house from "../img/home/House.png";
+import train from "../img/home/Train.png";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>oi</main>
+<Layout title="Home">
+  <main class="flex-center flex-col gap-3">
+    <header class="w-full flex-center">
+      <div class="w-[1850px] overflow-auto flex-center mt-24 lg:mt-0">
+        <img
+          class="min-w-[1500px] h-full hidden lg:block"
+          src={HomeBG.src}
+          alt=""
+        />
+        <img
+          class="w-full max-w-[700px] h-full block lg:hidden"
+          src={MobileHomeBG.src}
+          alt=""
+        />
+      </div>
+
+      <div
+        class="absolute self-start lg:self-center lg:left-12 mt-5 lg:-mt-[10%] flex-center flex-col"
+      >
+        <img class="w-[150px] lg:w-[200px]" src={Logo.src} alt="" />
+        <div>
+          <h1 class="text-lw-blue">CALHOME</h1>
+          <h1 class="text-white text-shadow">PROGRAM</h1>
+        </div>
+      </div>
+    </header>
+    <div class="w-[80%] h-[80px]">
+      <div class="button">
+        <img src={house.src} alt="" />
+
+        <div class="h-[80%] w-[3px] bg-lw-orange-2"></div>
+        <h2>
+          <b>FIRST TIME</b><br />
+           HOME BUYER <br />
+           PROGRAM
+        </h2>
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  h1 {
+    @apply text-5xl sm:text-7xl lg:text-7xl 2xl:text-9xl font-bold;
+  }
+
+  .text-shadow {
+    text-shadow: 3px 5px rgba(0, 0, 0, 0.425);
+  }
+
+  .button {
+    @apply h-[150px] w-[330px] flex justify-center items-center gap-2 hover:bg-white/50 hover:shadow-lg px-4 py-1 hover:scale-105 transition-all cursor-pointer rounded-md;
+  }
+
+  .button img {
+    @apply w-[100px] h-full object-contain;
+  }
+
+  .button h2 {
+    @apply text-lw-blue  2xl:text-2xl leading-3;
+  }
+</style>
