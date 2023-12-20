@@ -10,6 +10,10 @@ export default {
 				"lw-orange-1": "#FCA311",
 				"lw-orange-2": "#FFC30F",
 				"lw-orange-3": "#F5DF80",
+			},
+
+			screens: {
+				"xs": "450px",
 			}
 		},
 	},
