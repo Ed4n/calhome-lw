@@ -14,6 +14,10 @@ export default {
 
 			screens: {
 				"xs": "450px",
+			},
+
+			backgroundImage: {
+				"fthb-bg-1": "url('./src/img/fthb/FTHB_BG1.jpg')",
 			}
 		},
 	},

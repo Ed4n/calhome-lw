@@ -51,7 +51,7 @@ import buildings from "../img/home/Buildings_BG.jpg";
         <div
           class="w-[60%] min-w-[440px] h-[200px] flex-col xs:flex-row flex-center gap-3 lg:gap-7"
         >
-          <div class="button order-2 xs:order-1">
+          <a href="/fthb" class="button order-2 xs:order-1">
             <img src={house.src} alt="" />
 
             <div class="h-1/2 lg:h-[70%] w-[3px] bg-lw-orange-2"></div>
@@ -60,9 +60,9 @@ import buildings from "../img/home/Buildings_BG.jpg";
                HOME BUYER <br />
                PROGRAM
             </h2>
-          </div>
+          </a>
 
-          <div class="button order-1 xs:order-2">
+          <a href="/oor" class="button order-1 xs:order-2">
             <img src={train.src} alt="" />
 
             <div class="h-1/2 lg:h-[70%] w-[3px] bg-lw-blue"></div>
@@ -70,7 +70,7 @@ import buildings from "../img/home/Buildings_BG.jpg";
               <b>MOBILE</b><br />
                HOMES
             </h2>
-          </div>
+          </a>
         </div>
 
         <a
@@ -87,10 +87,6 @@ import buildings from "../img/home/Buildings_BG.jpg";
 <style>
   h1 {
     @apply text-5xl sm:text-7xl lg:text-7xl 2xl:text-9xl font-bold;
-  }
-
-  .text-shadow {
-    text-shadow: 3px 5px rgba(0, 0, 0, 0.425);
   }
 
   .button {

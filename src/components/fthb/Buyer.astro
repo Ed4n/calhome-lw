@@ -1,0 +1,41 @@
+---
+const { img, info } = Astro.props;
+---
+
+<section
+  class="w-full bg-fthb-bg-1 bg-cover py-16 px-12 flex flex-col gap-5 relative text-white text-xl md:text-2xl"
+>
+  <div class="triangle"></div>
+
+  <h2 class="text-5xl">Buyer</h2>
+
+  <!-- Columns -->
+  <div class="w-full flex flex-col md:flex-row gap-5 md:gap-16">
+    <ul class="w-full md:w-1/2 flex flex-col gap-5">
+      <li class="list-disc">{info[0]}</li>
+      <li class="list-disc">{info[1]}</li>
+      <li class="list-disc">{info[2]}</li>
+    </ul>
+
+    <ul class="w-full md:w-1/2 flex flex-col gap-5">
+      <li class="list-disc">{info[3]}</li>
+      <li class="list-disc">
+        The maximum CalHome loan amount will be <b>40 percent</b> of the
+        Borrower’s purchase price for the property, <b
+          >or up to a maximum of $XXX.</b
+        >
+      </li>
+    </ul>
+  </div>
+
+  <ul>
+    <li class="list-disc">{info[6]}</li>
+  </ul>
+</section>
+
+<style>
+  .triangle {
+    clip-path: polygon(53% 55%, 0% 100%, 100% 100%);
+    @apply bg-lw-blue w-[120px] h-[100px] absolute -top-24;
+  }
+</style>
