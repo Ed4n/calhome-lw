@@ -1,0 +1,40 @@
+---
+const { info } = Astro.props;
+---
+
+<section
+  class="w-full bg-oor-bg-2 bg-cover py-16 px-16 flex flex-col gap-7 relative text-white text-xl md:text-2xl"
+>
+  <div class="triangle bg-lw-blue-2 right-16"></div>
+
+  <h2 class="text-5xl">Property Guidelines</h2>
+
+  <!-- Columns -->
+  <div class="w-full flex flex-col md:flex-row gap-5 md:gap-16">
+    <ul class="w-full md:w-1/2 flex flex-col gap-7 list-disc">
+      <li>{info.list[0]}</li>
+    </ul>
+
+    <ul class="w-full md:w-1/2 flex flex-col gap-5 list-disc">
+      <li>{info.list[1]}</li>
+    </ul>
+  </div>
+
+  <ul class="flex flex-col gap-5">
+    <li class="list-disc">{info.list[2]}</li>
+
+    <div class="w-[90%] self-center flex flex-col md:flex-row gap-5 md:gap-16">
+      <ul class="w-full md:w-1/2 flex flex-col gap-7">
+        <li class="flex gap-2"><span>a)</span> {info.cost[0]}</li>
+        <li class="flex gap-2"><span>b)</span> {info.cost[1]}</li>
+        <li class="flex gap-2"><span>c)</span> {info.cost[2]}</li>
+      </ul>
+
+      <ul class="w-full md:w-1/2 flex flex-col gap-5">
+        <li class="flex gap-2"><span>d)</span> {info.cost[3]}</li>
+        <li class="flex gap-2"><span>e)</span> {info.cost[4]}</li>
+
+      </ul>
+    </div>
+  </ul>
+</section>

@@ -1,0 +1,8 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="px-5 w-[350px] flex flex-col text-lg">
+  <b class="text-xl">{title}</b>
+  <slot> 10% reduction from principal amount, lowering amount to $XXX.</slot>
+</div>

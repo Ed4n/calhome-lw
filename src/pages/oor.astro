@@ -1,6 +1,131 @@
-<main>
-  <a class="absolute left-3 top-3 bg-gray-400 px-4 py-2" href="../"
-    >Go to Home</a
-  >
-   OOR
-</main>
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+
+import ImageBG from "../img/oor/OOR_MainBG.jpg";
+import Owner from "../components/oor/Owner.astro";
+import PropertyGuidelinesOOR from "../components/oor/PropertyGuidelinesOOR.astro";
+import LoanTermsOOR from "../components/oor/LoanTermsOOR.astro";
+import PaymentBreakdown from "../components/oor/PaymentBreakdown.astro";
+
+import Footer from "../components/Footer.astro";
+import LoanTerms from "../components/fthb/LoanTerms.astro";
+
+// FTHB // ----------------------------------
+const buyerInfo = [
+  "You must occupy the property as your primary place of residence.",
+  "You must not have owned a residential unit or been on the title of a residential unit within the last three years.",
+  "The purchase price may not exceed $650,000, subject to periodic adjustments.",
+  "You must contribute three percent of the purchase price from your funds.",
+  `The maximum CalHome loan amount will be 40 percent of the Borrower’s purchase price for the property, <b>or up to a maximum of $XXX.</b>`,
+  "You must complete a CalHome Approved Homebuyer Education Class.",
+  "The total gross annual income of the entire household must not exceed 80 percent of the Los Angeles County Area Median Income (AMI).",
+];
+const propertyGuidelines = [
+  "The property must be within the City of Lynwood’s limits/boundaries.",
+  "Occupancy Ratio: No more than 1.5 people per living space (including bedrooms, living room, family room, den/study).",
+  "The property must be occupied by the seller/owner and must not have been vacated within the last 30 days.",
+  "The property may be a new or resale single-family detached unit, condominium, townhouse, or manufactured home on a permanent foundation.",
+  "You must obtain fire and casualty insurance, including flood insurance when applicable, covering the replacement value of property improvements.",
+  "The property must be free from any health & safety hazards and/or lead poisoning exposures.",
+  "Before final loan approval, a Housing Quality Standards (HQS) inspection will be conducted to verify the property’s condition. Proof of initial building permit issuance must be provided.",
+];
+
+const loanTerms = {
+  list: [
+    "Principal and interest payments shall be deferred for the term of the CalHome Program Loan.",
+    "CalHome program Loans shall be secured by the property.",
+    "Prohibited loans and terms:",
+  ],
+  loanTerms: [
+    "Negative Amortization",
+    " Stated Income",
+    "Adjustable-Rate Mortgage (ARM)",
+    "Interest-Only Loans",
+    " The Front-End Ratio cannot be below 28 percent or over 40 percent.",
+    "The Back-End Ratio cannot be over 48 percent.",
+  ],
+};
+
+// OOR // --------------------------------------
+
+const owner = [
+  "The property must be owner-occupied.",
+  "The minimum loan amount for eligible Borrowers is $XXX; the maximum is $XXX.",
+  "The property must be a manufactured home on a permanent foundation.",
+  "Applicant household income cannot exceed 80% of Los Angeles County Area Median Income (AMI).",
+];
+
+const oorPropertyGuidelines = {
+  list: [
+    "The property must be within the City of Lynwood limits/boundaries.",
+    "Occupancy Ratio: No more than 1.5 people per living space (including bedrooms, living room, family room, den/study).",
+    "CalHome program funds in support of an Owner-Occupied Rehabilitation program shall be used only for the following costs:",
+  ],
+
+  cost: [
+    "Cost of Rehabilitation of the property.",
+    "Cost of building permits and other related government fees.",
+    "Cost of an appraisal, architectural, engineering, and other consultant services that are directly related to the Rehabilitation of the property.",
+    "Non-recurring Loan closing costs.",
+    "Replacement cost of a manufactured home not on a permanent foundation, where it has been determined by the Recipient that it is infeasible to rehabilitate the home.",
+  ],
+};
+
+const oorLoanTerms = {
+  list: [
+    "Principal and interest payments shall be deferred for the term of the CalHome Loan.",
+    "The full loan amount becomes due and payable in the following circumstances:",
+  ],
+  circumstances: [
+    "Sale or transfer of the property, excluding permitted transfers",
+    "The owner no longer occupies the property as their primary residence",
+  ],
+};
+
+const paymentBreakdown = {
+  list: [
+    "The Loan shall be due and payable in 20 years, with 10 percent of the original principal to be forgiven annually for each additional year beyond the 10th year that the Borrower owns and continuously occupies the home.",
+    "Example: The original loan amount is $XXX with a 3% simple interest added, totaling $XX.",
+    "Simple Interest Repayment: The accrued simple interest cannot be waived. A monthly repayment of $XXX will be required over the span of one year to settle the remaining balance.",
+  ],
+
+  payments: [
+    "Full amount due, no deductions",
+    "10% reduction from principal amount, lowering amount to $XXX.",
+    "Final 10% reduction, with a remaining balance of $XXX—only being the 3% simple interest for repayment.",
+  ],
+};
+---
+
+<Layout title="fthb">
+  <main>
+    <Nav />
+    <header
+      class="w-full h-[60vh] min-h-400px lg:h-[80vh] relative overflow-hidden"
+    >
+      <img class="w-full h-full object-cover" src={ImageBG.src} alt="" />
+      <div
+        class="w-full h-full bg-lw-orange-1/40 lg:bg-transparent absolute top-0 flex justify-center items-center lg:items-start flex-col gap-5 lg:gap-24 lg:pl-12"
+      >
+        <h1
+          class="flex flex-col leading-11 text-white text-shadow text-5xl lg:text-7xl text-center lg:text-end"
+        >
+          <b>MOBILE</b>HOMES <br />
+        </h1>
+
+        <h2 class="text-white text-3xl lg:text-5xl text-center lg:text-start">
+          PROGRAM OVERVIEW <br /> EFFECTIVE 2024
+        </h2>
+      </div>
+    </header>
+
+    <Owner info={owner} />
+    <PropertyGuidelinesOOR info={oorPropertyGuidelines} />
+    <LoanTermsOOR info={oorLoanTerms} />
+
+    <PaymentBreakdown info={paymentBreakdown} />
+
+    <Footer />
+  </main>
+</Layout>

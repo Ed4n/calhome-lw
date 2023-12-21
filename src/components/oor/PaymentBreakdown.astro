@@ -1,0 +1,43 @@
+---
+import PaymentBox from "./PaymentBox.astro";
+const { info } = Astro.props;
+---
+
+<section
+  class="w-full bg-oor-bg-4 bg-cover py-16 px-16 flex flex-col gap-7 relative text-black/90 text-xl md:text-2xl"
+>
+  <div class="triangle bg-lw-orange-1 right-16"></div>
+  <h2 class="text-5xl">Payment Breakdown</h2>
+
+  <!-- Columns -->
+  <div class="w-full flex flex-col md:flex-row gap-5 md:gap-16">
+    <ul class="w-full flex flex-col gap-7">
+      <li>{info.list[0]}</li>
+      <li class="text-lg">{info.list[1]}</li>
+    </ul>
+  </div>
+
+  <div
+    class="flex justify-center lg:justify-between w-[100%] lg:w-[1155px] items-start gap-5 flex-wrap self-center"
+  >
+    <PaymentBox title="1st -10th Year:">{info.payments[0]}</PaymentBox>
+    <PaymentBox title="11th Year:" />
+    <PaymentBox title="12th Year:" />
+    <PaymentBox title="13th Year:" />
+    <PaymentBox title="14th Year:" />
+    <PaymentBox title="15th Year:" />
+    <PaymentBox title="16th Year:" />
+    <PaymentBox title="17th Year:" />
+    <PaymentBox title="18th Year:" />
+    <PaymentBox title="19th Year:" />
+    <div class="px-5 w-[350px] lg:w-[750px] flex flex-col text-lg">
+      <b class="text-xl">20th Year:</b>
+
+      {info.payments[2]}
+    </div>
+  </div>
+
+  <ul class="flex flex-col gap-5">
+    <li>{info.list[2]}</li>
+  </ul>
+</section>
