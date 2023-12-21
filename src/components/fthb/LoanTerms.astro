@@ -1,0 +1,40 @@
+---
+const { info } = Astro.props;
+---
+
+<section
+  class="w-full bg-fthb-bg-3 bg-cover py-16 px-16 flex flex-col gap-7 relative text-white text-xl md:text-2xl"
+>
+  <div class="triangle bg-lw-blue-3"></div>
+
+  <h2 class="text-5xl">Loan Terms</h2>
+
+  <!-- Columns -->
+  <div class="w-full flex flex-col md:flex-row gap-5 md:gap-16">
+    <ul class="w-full md:w-1/2 flex flex-col gap-7 list-disc">
+      <li>{info.list[0]}</li>
+    </ul>
+
+    <ul class="w-full md:w-1/2 flex flex-col gap-5 list-disc">
+      <li>{info.list[1]}</li>
+    </ul>
+  </div>
+
+  <ul class="flex flex-col gap-5">
+    <li class="list-disc">{info.list[2]}</li>
+
+    <div class="w-[90%] self-center flex flex-col md:flex-row gap-5 md:gap-16">
+      <ul class="w-full md:w-1/2 flex flex-col gap-7">
+        <li class="flex gap-2"><span>a)</span> {info.loanTerms[0]}</li>
+        <li class="flex gap-2"><span>a)</span> {info.loanTerms[1]}</li>
+        <li class="flex gap-2"><span>a)</span> {info.loanTerms[2]}</li>
+      </ul>
+
+      <ul class="w-full md:w-1/2 flex flex-col gap-5">
+        <li class="flex gap-2"><span>a)</span> {info.loanTerms[3]}</li>
+        <li class="flex gap-2"><span>a)</span> {info.loanTerms[4]}</li>
+        <li class="flex gap-2"><span>a)</span> {info.loanTerms[5]}</li>
+      </ul>
+    </div>
+  </ul>
+</section>

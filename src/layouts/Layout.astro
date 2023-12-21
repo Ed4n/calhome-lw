@@ -34,4 +34,9 @@ const { title } = Astro.props;
   .text-shadow {
     text-shadow: 3px 5px rgba(0, 0, 0, 0.425);
   }
+
+  .triangle {
+    clip-path: polygon(53% 55%, 0% 100%, 100% 100%);
+    @apply w-[80px] h-[60px] md:w-[120px] md:h-[100px] absolute -top-14 md:-top-24;
+  }
 </style>

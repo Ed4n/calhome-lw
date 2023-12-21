@@ -4,6 +4,8 @@ import Nav from "../components/Nav.astro";
 
 import ImageBG from "../img/fthb/FTHB_MainBG.jpg";
 import Buyer from "../components/fthb/Buyer.astro";
+import PropertyGuidelines from "../components/fthb/PropertyGuidelines.astro";
+import LoanTerms from "../components/fthb/LoanTerms.astro";
 import bg1 from "../img/fthb/FTHB_BG1.jpg";
 
 const buyerInfo = [
@@ -15,6 +17,31 @@ const buyerInfo = [
   "You must complete a CalHome Approved Homebuyer Education Class.",
   "The total gross annual income of the entire household must not exceed 80 percent of the Los Angeles County Area Median Income (AMI).",
 ];
+const propertyGuidelines = [
+  "The property must be within the City of Lynwood’s limits/boundaries.",
+  "Occupancy Ratio: No more than 1.5 people per living space (including bedrooms, living room, family room, den/study).",
+  "The property must be occupied by the seller/owner and must not have been vacated within the last 30 days.",
+  "The property may be a new or resale single-family detached unit, condominium, townhouse, or manufactured home on a permanent foundation.",
+  "You must obtain fire and casualty insurance, including flood insurance when applicable, covering the replacement value of property improvements.",
+  "The property must be free from any health & safety hazards and/or lead poisoning exposures.",
+  "Before final loan approval, a Housing Quality Standards (HQS) inspection will be conducted to verify the property’s condition. Proof of initial building permit issuance must be provided.",
+];
+
+const loanTerms = {
+  list: [
+    "Principal and interest payments shall be deferred for the term of the CalHome Program Loan.",
+    "CalHome program Loans shall be secured by the property.",
+    "Prohibited loans and terms:",
+  ],
+  loanTerms: [
+    "Negative Amortization",
+    " Stated Income",
+    "Adjustable-Rate Mortgage (ARM)",
+    "Interest-Only Loans",
+    " The Front-End Ratio cannot be below 28 percent or over 40 percent.",
+    "The Back-End Ratio cannot be over 48 percent.",
+  ],
+};
 ---
 
 <Layout title="fthb">
@@ -39,6 +66,9 @@ const buyerInfo = [
       </div>
     </header>
 
-    <Buyer img={bg1} info={buyerInfo} />
+    <Buyer info={buyerInfo} />
+    <PropertyGuidelines info={propertyGuidelines} />
+
+    <LoanTerms info={loanTerms} />
   </main>
 </Layout>
