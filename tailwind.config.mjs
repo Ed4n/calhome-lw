@@ -17,6 +17,7 @@ export default {
 			},
 
 			backgroundImage: {
+				"buildings-texture": "url('/Buildings_BG.jpg')",
 				"fthb-bg-1": "url('/FTHB_BG1.jpg')",
 				"fthb-bg-2": "url('/FTHB_BG2.jpg')",
 				"fthb-bg-3": "url('/FTHB_BG3.jpg')",

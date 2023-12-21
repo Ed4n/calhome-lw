@@ -6,7 +6,7 @@ import ImageBG from "../img/fthb/FTHB_MainBG.jpg";
 import Buyer from "../components/fthb/Buyer.astro";
 import PropertyGuidelines from "../components/fthb/PropertyGuidelines.astro";
 import LoanTerms from "../components/fthb/LoanTerms.astro";
-import bg1 from "../img/fthb/FTHB_BG1.jpg";
+import Footer from "../components/Footer.astro";
 
 const buyerInfo = [
   "You must occupy the property as your primary place of residence.",
@@ -70,5 +70,6 @@ const loanTerms = {
     <PropertyGuidelines info={propertyGuidelines} />
 
     <LoanTerms info={loanTerms} />
+    <Footer />
   </main>
 </Layout>
