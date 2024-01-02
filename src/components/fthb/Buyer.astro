@@ -1,5 +1,5 @@
 ---
-const { info } = Astro.props;
+const { info, es = false } = Astro.props;
 ---
 
 <section
@@ -7,7 +7,7 @@ const { info } = Astro.props;
 >
   <div class="triangle bg-lw-blue"></div>
 
-  <h2 class="text-5xl">Buyer</h2>
+  <h2 class="text-5xl">{es ? "Propietario" : "Buyer "}</h2>
 
   <!-- Columns -->
   <div class="w-full flex flex-col md:flex-row gap-5 md:gap-16">
@@ -19,12 +19,22 @@ const { info } = Astro.props;
 
     <ul class="w-full md:w-1/2 flex flex-col gap-5 list-disc">
       <li>{info[3]}</li>
-      <li>
-        The maximum CalHome loan amount will be <b>40 percent</b> of the
-        Borrower’s purchase price for the property, <b
-          >or up to a maximum of $XXX.</b
-        >
-      </li>
+      {
+        es ? (
+          <li>
+            El monto máximo del préstamo de CalHome será el <b>40 por ciento</b>{" "}
+            del precio de compra de la propiedad por parte del Prestatario,{" "}
+            <b>o hasta un máximo de $XXX.</b>
+          </li>
+        ) : (
+          <li>
+            The maximum CalHome loan amount will be <b>40 percent</b> of the
+            Borrower’s purchase price for the property,{" "}
+            <b>or up to a maximum of $XXX.</b>
+          </li>
+        )
+      }
+
       <li>{info[5]}</li>
     </ul>
   </div>

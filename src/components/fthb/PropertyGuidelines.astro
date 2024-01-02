@@ -1,5 +1,5 @@
 ---
-const { info } = Astro.props;
+const { info, es = false } = Astro.props;
 ---
 
 <section
@@ -7,7 +7,9 @@ const { info } = Astro.props;
 >
   <div class="triangle bg-lw-orange-2 right-12"></div>
 
-  <h2 class="text-5xl">Property Guidelines</h2>
+  <h2 class="text-5xl">
+    {es ? "Directrices de Propiedad" : "Property Guidelines "}
+  </h2>
 
   <!-- Columns -->
   <div class="w-full flex flex-col md:flex-row gap-5 md:gap-16">

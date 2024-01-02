@@ -1,0 +1,93 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+
+import ImageBG from "../../img/oor/OOR_MainBG.jpg";
+import Owner from "../../components/oor/Owner.astro";
+import PropertyGuidelinesOOR from "../../components/oor/PropertyGuidelinesOOR.astro";
+import LoanTermsOOR from "../../components/oor/LoanTermsOOR.astro";
+import PaymentBreakdown from "../../components/oor/PaymentBreakdown.astro";
+
+import Footer from "../../components/EsFooterOOR.astro";
+
+// OOR // --------------------------------------
+
+const owner = [
+  "La propiedad debe estar ocupada por el propietario.",
+  "La propiedad debe ser una casa prefabricada sobre cimientos permanentes.",
+  "El monto mínimo del préstamo para prestatarios elegibles es $XXX; el máximo es $XXX.",
+  "Los ingresos del hogar del solicitante no pueden exceder el 80% del ingreso medio del área (AMI) del condado de Los Ángeles.",
+];
+
+const oorPropertyGuidelines = {
+  list: [
+    "La propiedad debe estar dentro de los límites de la ciudad de La Puente.",
+    "Proporción de ocupación: No más de 1.5 personas por espacio habitable (incluidos dormitorios, sala de estar, sala familiar, estudio).",
+    "Los fondos del programa CalHome en apoyo de un programa de rehabilitación ocupado por el propietario se utilizarán únicamente para los siguientes costos:",
+  ],
+
+  cost: [
+    "Costo de Rehabilitación del inmueble.",
+    "Costo de los permisos de construcción y otras tasas gubernamentales relacionadas.",
+    "Costo de servicios de tasación, arquitectura, ingeniería y otros servicios de consultoría que estén directamente relacionados con la Rehabilitación del inmueble.",
+    "Costos de cierre del Préstamo no recurrentes.",
+    "Costo de reemplazo de una casa prefabricada que no tiene cimientos permanentes, cuando el Receptor haya determinado que no es factible rehabilitar la casa.",
+  ],
+};
+
+const oorLoanTerms = {
+  list: [
+    "Los pagos de capital e interés se diferirán durante el plazo del Préstamo CalHome.",
+    "El monto total del préstamo vence y es pagadero en las siguientes circunstancias:",
+  ],
+  circumstances: [
+    "Venta o transferencia de la propiedad, excluidas las transferencias permitidas.",
+    "El propietario ya no ocupa la propiedad como su residencia principal.",
+  ],
+};
+
+const paymentBreakdown = {
+  list: [
+    "El préstamo se diferirá durante 20 años. Si se requiere el pago antes de que concluya este  período diferido, el siguiente desglose describe el monto de pago necesario.",
+    "Ejemplo: el monto del préstamo original es $XXX con un interés simple agregado del 3 %, por un total de $XXX.",
+    "Pago de interés simple: El interés simple devengado no se puede renunciar. Se requerirá un pago mensual de $XXX durante el lapso de un año para liquidar el saldo restante.",
+  ],
+
+  payments: [
+    "monto total adeudado, sin deducciones",
+    "reducción del 10 % del monto principal, lo que reduce el monto a $XXX",
+    "Reducción final del 10%, con un saldo restante de $XXX, siendo solo el 3% de interés simple por pagar.",
+  ],
+};
+---
+
+<Layout title="fthb">
+  <main>
+    <Nav />
+    <header
+      class="w-full h-[60vh] min-h-400px lg:h-[80vh] relative overflow-hidden"
+    >
+      <img class="w-full h-full object-cover" src={ImageBG.src} alt="" />
+      <div
+        class="w-full h-full bg-lw-orange-1/40 lg:bg-transparent absolute top-0 flex justify-center items-center lg:items-start flex-col gap-5 lg:gap-24 lg:pl-12"
+      >
+        <h1
+          class="flex flex-col leading-11 text-white text-shadow text-5xl lg:text-7xl text-center lg:text-start"
+        >
+          <b>CASAS</b>PREFABRICADAS <br />
+        </h1>
+
+        <h2 class="text-white text-3xl lg:text-5xl text-center lg:text-start">
+          Descripción del programa <br /> Eficaz 2024
+        </h2>
+      </div>
+    </header>
+
+    <Owner info={owner} es={true} />
+    <PropertyGuidelinesOOR es={true} info={oorPropertyGuidelines} />
+    <LoanTermsOOR es={true} info={oorLoanTerms} />
+    <PaymentBreakdown es={true} info={paymentBreakdown} />
+
+    <Footer />
+  </main>
+</Layout>

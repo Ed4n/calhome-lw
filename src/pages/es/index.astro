@@ -1,12 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import HomeBG from "../img/home/Home_BG.png";
-import MobileHomeBG from "../img/home/Mobile_BG.png";
-import Logo from "../img/home/Logo.png";
+import Layout from "../../layouts/Layout.astro";
+import HomeBG from "../../img/home/Home_BG.png";
+import MobileHomeBG from "../../img/home/Mobile_BG.png";
+import Logo from "../../img/home/Logo.png";
 
-import house from "../img/home/House.png";
-import train from "../img/home/Train.png";
-import buildings from "../img/home/Buildings_BG.jpg";
+import house from "../../img/home/House.png";
+import train from "../../img/home/Train.png";
+import buildings from "../../img/home/Buildings_BG.jpg";
 ---
 
 <Layout title="Home">
@@ -51,6 +51,7 @@ import buildings from "../img/home/Buildings_BG.jpg";
         <div
           class="w-[60%] min-w-[440px] h-[200px] flex-col xs:flex-row flex-center gap-3 lg:gap-7"
         >
+          <!-- FTHB -->
           <a href="fthb" class="button order-2 xs:order-1">
             <img src={house.src} alt="" />
 
@@ -62,22 +63,23 @@ import buildings from "../img/home/Buildings_BG.jpg";
             </h2>
           </a>
 
-          <a href="/oor" class="button order-1 xs:order-2">
+          <!-- OOR -->
+          <a href="oor" class="button order-1 xs:order-2">
             <img src={train.src} alt="" />
 
             <div class="h-1/2 lg:h-[70%] w-[3px] bg-lw-blue"></div>
             <h2>
-              <b>MOBILE</b><br />
-               HOMES
+              <b>Casas</b><br />
+               Prefabricadas
             </h2>
           </a>
         </div>
 
         <a
           class="px-7 py-2 bg-lw-blue text-white border-[2px] border-lw-orange-2 rounded-lg"
-          href="./es/index.html"
+          href="../index.html"
         >
-          Español</a
+          English?</a
         >
       </div>
     </div>

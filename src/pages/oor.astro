@@ -8,7 +8,7 @@ import PropertyGuidelinesOOR from "../components/oor/PropertyGuidelinesOOR.astro
 import LoanTermsOOR from "../components/oor/LoanTermsOOR.astro";
 import PaymentBreakdown from "../components/oor/PaymentBreakdown.astro";
 
-import Footer from "../components/Footer.astro";
+import Footer from "../components/FooterOOR.astro";
 import LoanTerms from "../components/fthb/LoanTerms.astro";
 
 // FTHB // ----------------------------------
@@ -109,7 +109,7 @@ const paymentBreakdown = {
         class="w-full h-full bg-lw-orange-1/40 lg:bg-transparent absolute top-0 flex justify-center items-center lg:items-start flex-col gap-5 lg:gap-24 lg:pl-12"
       >
         <h1
-          class="flex flex-col leading-11 text-white text-shadow text-5xl lg:text-7xl text-center lg:text-end"
+          class="flex flex-col leading-11 text-white text-shadow text-5xl lg:text-7xl text-center lg:text-start"
         >
           <b>MOBILE</b>HOMES <br />
         </h1>
@@ -123,7 +123,6 @@ const paymentBreakdown = {
     <Owner info={owner} />
     <PropertyGuidelinesOOR info={oorPropertyGuidelines} />
     <LoanTermsOOR info={oorLoanTerms} />
-
     <PaymentBreakdown info={paymentBreakdown} />
 
     <Footer />

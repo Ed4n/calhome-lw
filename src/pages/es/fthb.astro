@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+
+import ImageBG from "../../img/fthb/FTHB_MainBG.jpg";
+import Buyer from "../../components/fthb/Buyer.astro";
+import PropertyGuidelines from "../../components/fthb/PropertyGuidelines.astro";
+import LoanTerms from "../../components/fthb/LoanTerms.astro";
+import Footer from "../../components/EsFooterFTHB.astro";
+
+const buyerInfoEs = [
+  "La propiedad debe estar ubicada dentro de los límites de la ciudad de Lynwood.",
+  "La propiedad puede ser una unidad unifamiliar nueva o de reventa, condominio, casa adosada o casa prefabricada sobre una base permanente.",
+  "Relación de ocupación: No más de 1.5 personas por espacio habitable (incluyendo dormitorios, sala de estar, sala familiar, guarida / estudio).",
+  "Debe obtener un seguro de incendio y accidentes, incluido el seguro contra inundaciones cuando corresponda, cubriendo el valor de reposición de las mejoras de la propiedad.",
+  "La propiedad debe ser ocupada por el vendedor / propietario y no debe haber sido desocupada en los últimos 30 días.",
+  "La propiedad debe estar libre de cualquier peligro para la salud y la seguridad y / o exposición al envenenamiento por plomo.",
+  "Antes de la aprobación final del préstamo, se llevará a cabo una inspección de los Estándares de Calidad de la Vivienda (HQS) para verificar la condición de la propiedad. Se debe proporcionar una prueba de la emisión inicial del permiso de construcción.",
+  "Debes ocupar la propiedad como tu lugar de residencia principal.",
+  "No debes haber sido propietario de una unidad residencial ni haber figurado en el título de una unidad residencial en los últimos tres años.",
+  "El precio de compra no puede superar los $650,000, sujeto a ajustes periódicos.",
+  "Debes aportar el tres por ciento del precio de compra con tus propios fondos.",
+  "La cantidad máxima del préstamo CalHome será el 40 por ciento del precio de compra del prestatario para la propiedad, o hasta un máximo de $XXX",
+  "Debes completar una Clase de Educación para Compradores de Viviendas Aprobada por CalHome.",
+  "El ingreso anual bruto total de todo el hogar no debe superar el 80 por ciento del Ingreso Medio del Área (AMI) del Condado de Los Ángeles.",
+];
+
+const propertyGuidelinesEs = [
+  "La propiedad debe estar dentro de los límites de la ciudad de Lynwood.",
+  "Relación de ocupación: No más de 1.5 personas por espacio habitable (incluyendo dormitorios, sala de estar, sala familiar, estudio/despacho).",
+  "La propiedad debe estar ocupada por el vendedor/propietario y no debe haber sido desocupada en los últimos 30 días.",
+  "La propiedad puede ser una unidad unifamiliar nueva o de reventa, condominio, casa adosada o casa prefabricada en una base permanente.",
+  "Debes obtener un seguro contra incendios y daños, incluido el seguro contra inundaciones cuando corresponda, que cubra el valor de reposición de las mejoras de la propiedad.",
+  "La propiedad debe estar libre de cualquier peligro para la salud y seguridad y/o exposiciones al envenenamiento por plomo.",
+  "Antes de la aprobación final del préstamo, se llevará a cabo una inspección de Estándares de Calidad de Vivienda (HQS) para verificar la condición de la propiedad. Se debe proporcionar prueba de la emisión del permiso de construcción inicial.",
+];
+
+const loanTermsEs = {
+  list: [
+    "Los pagos de capital e intereses se diferirán por el plazo del Préstamo del Programa CalHome.",
+    "Los préstamos del programa CalHome estarán garantizados por la propiedad.",
+    "Préstamos y términos prohibidos:",
+  ],
+  loanTerms: [
+    "Amortización Negativa",
+    "Ingresos Declarados",
+    "Hipoteca de Tasa Ajustable (ARM)",
+    "Préstamos Solo de Interés",
+    "El Gasto Inicial no puede estar por debajo del 28 por ciento ni más del 40 por ciento.",
+    "El Gasto Final no puede ser superior al 48 por ciento.",
+  ],
+};
+---
+
+<Layout title="fthb">
+  <main>
+    <Nav />
+    <header
+      class="w-full h-[60vh] min-h-400px lg:h-[80vh] relative overflow-hidden"
+    >
+      <img class="w-full h-full object-cover" src={ImageBG.src} alt="" />
+      <div
+        class="w-full h-full bg-lw-blue/30 lg:bg-transparent absolute top-0 flex justify-center items-center lg:items-end flex-col gap-5 lg:gap-24 lg:pr-12"
+      >
+        <h1
+          class="flex flex-col leading-11 text-white text-shadow text-5xl lg:text-7xl text-center lg:text-end"
+        >
+          <b>Programa para <br /> Propietarios</b>
+           Por Primera Vez
+        </h1>
+
+        <h2 class="text-white text-3xl lg:text-5xl text-center lg:text-end">
+          DESCRIPCION GENERAL DEL PROGRAMA <br /> DISPONIBLE 2024
+        </h2>
+      </div>
+    </header>
+
+    <Buyer es={true} info={buyerInfoEs} />
+    <PropertyGuidelines es={true} info={propertyGuidelinesEs} />
+
+    <LoanTerms es={true} info={loanTermsEs} />
+    <Footer />
+  </main>
+</Layout>
